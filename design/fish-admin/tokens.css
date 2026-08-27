@@ -1,0 +1,80 @@
+/**
+ * fish-admin design tokens
+ * SSOT: /Users/fishtv/Development/design/fish-admin/
+ * Canonical: products/startkiter/docs/startkiter-course-engine-visual-report-v2.html
+ */
+
+:root {
+  color-scheme: light;
+
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-raised: #f1f5f9;
+  --color-overlay: #e2e8f0;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-text: #0f172a;
+  --color-text-secondary: #334155;
+  --color-muted: #64748b;
+  --color-subtle: #94a3b8;
+  --color-signal: #f59e0b;
+  --color-signal-ink: #1c0a00;
+  --color-signal-soft: #fffbeb;
+  --color-success: #059669;
+  --color-success-soft: #f0fdf4;
+  --color-danger: #dc2626;
+  --color-danger-soft: #fef2f2;
+
+  --background: var(--color-background);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --border: var(--color-border);
+  --muted-foreground: var(--color-muted);
+  --primary: var(--color-signal);
+  --primary-foreground: var(--color-signal-ink);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 8px 10px -6px rgba(0, 0, 0, 0.10);
+  --radius: 8px;
+  --radius-large: 16px;
+  --content: 1280px;
+  --nav-height: 64px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --font-sans: Inter, "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+}
+
+html[data-theme="dark"],
+html.dark-mode {
+  color-scheme: dark;
+
+  --color-background: #0a0f1e;
+  --color-surface: #111827;
+  --color-raised: #1a2236;
+  --color-overlay: #1e2845;
+  --color-border: #1e2d4a;
+  --color-border-strong: #334155;
+  --color-text: #e8eeff;
+  --color-text-secondary: #c8d5f0;
+  --color-muted: #6b7fa8;
+  --color-subtle: #3d5080;
+  --color-signal: #f59e0b;
+  --color-signal-ink: #1c0a00;
+  --color-signal-soft: #1c0a00;
+  --color-success: #10b981;
+  --color-success-soft: #052e16;
+  --color-danger: #ef4444;
+  --color-danger-soft: #2d0000;
+
+  --background: var(--color-background);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --border: var(--color-border);
+  --muted-foreground: var(--color-muted);
+  --primary: var(--color-signal);
+  --primary-foreground: var(--color-signal-ink);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.40), 0 1px 2px -1px rgba(0, 0, 0, 0.40);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.40), 0 8px 10px -6px rgba(0, 0, 0, 0.40);
+}

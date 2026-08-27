@@ -57,6 +57,7 @@
 
 * 📋 **[案神 Awesome-Anson](https://github.com/fishtvlvoe/Awesome-Anson)**：接案分析、商務報價、合約拆解與提案簡報架構
 * 🏗️ **[蓋神 Awesome-Gason](https://github.com/fishtvlvoe/Awesome-Gason)**：Spectra SDD 全自動開發總管（規格→TDD→多代理派工→CR→驗收）
+* 🎨 **[網頁設計師 Awesome-website-design](https://github.com/fishtvlvoe/Awesome-website-design)**：網頁企劃與部署執行者，整合 frontend-design、impeccable 等工具產出 HTML mockup 並自己部署上線
 * 🗣️ **[譯神 Awesome-Eason](https://github.com/fishtvlvoe/Awesome-Eason)**（本倉庫）：小白技術降維、台灣繁中去 AI 味與翻譯急救
 * ⌨️ **[Key神 Awesome-Keyson](https://github.com/fishtvlvoe/Awesome-Keyson)**：自動 Key 單、智慧語意對齊與跨平台表單自動填寫
 * 📊 **[待神 Awesome-Dyson](https://github.com/fishtvlvoe/Awesome-Dyson)**：跨專案開發儀表板：固定網址看現況、進度、待確認事項與歷史紀錄，換 CLI/AI 接手不用重新對焦
@@ -163,6 +164,7 @@ git clone https://github.com/fishtvlvoe/Awesome-Eason.git ~/.agents/skills/aweso
 | 技術東西聽不懂 | 「我看不懂」、「說大白話」、「小白模式」 |
 | 文案改自然一點 | 「說人話」、「幫這段去 AI 味」、「改自然」 |
 | 只想知道哪裡怪，先不要動手改 | 「先標問題不要改」 |
+| 檢查／清文字隱形標記 | 「去文字浮水印」、「清理不可見字元」、「檢查有沒有文字浮水印」 |
 | **上面都試過還是不懂，要救命鍵** | 「看不懂，說人話」、「完全看不懂」、「還是不懂」 |
 | **連要打什麼都不知道** | 「請教我怎麼用你」，它會直接帶你 |
 
@@ -187,12 +189,14 @@ git clone https://github.com/fishtvlvoe/Awesome-Eason.git ~/.agents/skills/aweso
 
 - [`SKILL.md`](SKILL.md)：這個 Agent 的完整行為規則
 - [`.cursorrules`](.cursorrules)：給 Cursor 用的規則檔
-- [`install.sh`](install.sh)：CLI 一鍵安裝腳本，自動偵測裝去 Claude Code 還是 Codex／OpenCode
+- [`install.sh`](install.sh)：CLI 一鍵安裝腳本，自動偵測裝去 Claude Code 還是 Codex／OpenCode（也會掛上浮水印選配）
+- [`companions/text-watermark-cleaner-zh-tw/`](companions/text-watermark-cleaner-zh-tw/)：選配——檢查／清理文字隱形標記（來源見該目錄 `NOTICE.md`）
 - [`docs/index.html`](docs/index.html)：網頁版一鍵複製頁面的原始碼（就是 [fishtvlvoe.github.io/Awesome-Eason](https://fishtvlvoe.github.io/Awesome-Eason/) 這個網站）
 - [`references/tech-plain-talk.md`](references/tech-plain-talk.md)：技術轉生活比喻的對照庫
 - [`references/adhd-guardrails.md`](references/adhd-guardrails.md)：降低閱讀負擔的輸出規則
 - [`references/ai-patterns.md`](references/ai-patterns.md)：AI 常見套話特徵清單
 - [`references/taiwan-glossary.md`](references/taiwan-glossary.md)：台灣用語與標點對照表
+- [`references/text-watermark.md`](references/text-watermark.md)：文字浮水印選配怎麼觸發、做到哪
 - [`prompts/`](prompts/)：網頁版、Cursor 版用的提示詞原稿
 
 ---
@@ -200,3 +204,5 @@ git clone https://github.com/fishtvlvoe/Awesome-Eason.git ~/.agents/skills/aweso
 ## 授權
 
 [MIT License](LICENSE)，歡迎 Fork、提 PR、擴充比喻庫。
+
+文字浮水印選配另含上游 MIT 組件，授權與出處見 [`companions/text-watermark-cleaner-zh-tw/NOTICE.md`](companions/text-watermark-cleaner-zh-tw/NOTICE.md)。

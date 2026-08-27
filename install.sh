@@ -40,6 +40,29 @@ install_to() {
       return 1
     fi
   fi
+  link_watermark_companion "$target" "$label"
+}
+
+# 把文字浮水印 companion 掛成獨立 skill，Agent 才找得到 SKILL.md
+link_watermark_companion() {
+  local skill_root="$1"
+  local label="$2"
+  local src="$skill_root/companions/text-watermark-cleaner-zh-tw"
+  local dest
+  dest="$(dirname "$skill_root")/text-watermark-cleaner-zh-tw"
+
+  if [ ! -d "$src" ]; then
+    say "這版譯神還沒帶浮水印選配，略過。"
+    return 0
+  fi
+
+  if [ -e "$dest" ] && [ ! -L "$dest" ]; then
+    say "已有 ${dest}（不是連結），不動它。要用譯神內附版請先自己清掉那個資料夾。"
+    return 0
+  fi
+
+  ln -sfn "$src" "$dest"
+  say "浮水印選配已掛到 ${dest}（跟著 ${label}）。"
 }
 
 print_next_step() {
